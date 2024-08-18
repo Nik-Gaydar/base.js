@@ -17,14 +17,15 @@ function declorationFunc(par1, par2) {};
  * @returns {number} - тип данных возращаемых функцией
  */
 
-const expressionFunc(par1, par2) {};
+const expressionFunc = function(par1, par2) {};
 
 // Можно вызывать фуекцию только после ее определения
 
 /**
- * Описание стрелочной функции 
+ * Описание стрелочной функции (лямбда функция).
  * @param {number} par1 - первый параметр 
  * @param {number} par2 - второй параметр
  * @returns {number} - тип данных возращаемых функцией
  */
 
+const arrowFunc = () => {};
