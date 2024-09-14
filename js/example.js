@@ -1,69 +1,69 @@
-// // Работа с строками
+// Работа с строками
 
-// /**
-//  * @function capitalizeFirstLetter
-//  * @param {string} name
-//  * @returns {string} Строка с заглавной буквы
-//  */
+/**
+ * @function capitalizeFirstLetter
+ * @param {string} name
+ * @returns {string} Строка с заглавной буквы
+ */
 
-// const capitalizeFirstLetter = (name) => {
-//   return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-// };
+const capitalizeFirstLetter = (name) => {
+  return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+};
 
-// console.log(capitalizeFirstLetter('nikitos'));
+console.log(capitalizeFirstLetter('nikitos'));
 
-// /**
-//  * @function checkEmptyString
-//  * @param {string} firstName
-//  * @returns {string} 
-//  */
+/**
+ * @function checkEmptyString
+ * @param {string} firstName
+ * @returns {string} 
+ */
 
-// const checkEmptyString = (firstName) => {
-//   if (typeof firstName !== "string") {
-//     return "Ну кого ты пытаешься надуть?"
-//   }
-//   if (firstName.trim() === "") {
-//     return "Да натыкай ты уже какие нибудь буквы!"
-//   }
-// };
+const checkEmptyString = (firstName) => {
+  if (typeof firstName !== "string") {
+    return "Ну кого ты пытаешься надуть?"
+  }
+  if (firstName.trim() === "") {
+    return "Да натыкай ты уже какие нибудь буквы!"
+  }
+};
 
-// console.log(checkEmptyString('  '));
+console.log(checkEmptyString('  '));
 
-// Работа с булевыми значениями
+// Работа с булевым значением
 
-// /**
-//  * @function isEqualNumber
-//  * @param {number} num1
-//  * @param {number} num2
-//  * @returns {boolean}
-//  */
+/**
+ * @function isEqualNumber
+ * @param {number} num1
+ * @param {number} num2
+ * @returns {boolean}
+ */
 
-// const isEqualNumber = function(num1, num2) {
-//   if (num1 === num2) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// };
+const isEqualNumber = function(num1, num2) {
+  if (num1 === num2) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
-// console.log(isEqualNumber(2, 2));
+console.log(isEqualNumber(2, 2));
 
-// /**
-//  * @function checkSumTen
-//  * @param {number} num1
-//  * @param {number} num2
-//  * @returns {boolean}
-//  */
+/**
+ * @function checkSumTen
+ * @param {number} num1
+ * @param {number} num2
+ * @returns {boolean}
+ */
 
-// const checkSumTen = (num1, num2) => {
-//   if (num1 + num2 > 10) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// };
+const checkSumTen = (num1, num2) => {
+  if (num1 + num2 > 10) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
-// console.log(checkSumTen(8, 4));
+console.log(checkSumTen(8, 4));
 
 // Работа с объектом
 
@@ -80,7 +80,7 @@ const generateObjectToString = function(user) {
     typeof user !== 'object' || user === null) {
     throw new Error("Что то здесь не так..");
   }
-  return "Разыскивается: " user.name + user.age
+  return `Разыскивается: ${user.name}, Возраст: ${user.age}`;
 };
 
 const user = {
@@ -88,3 +88,27 @@ const user = {
   age: 75,
 }
 console.log(generateObjectToString(user));
+
+// Работа с массивом объектов
+
+/**
+ * @function foundUser
+ * @param {object} user
+ * @param {string} user.name
+ * @param {number} user.age
+ * @returns {object} foundUser
+ */
+
+const users = [
+  { name: "Дохлый Пит", age: 75 },
+  { name: "Мрачный Джон", age: 40 },
+  { name: "Весёлый Гарри", age: 30 },
+];
+
+const foundUser = (users) => {
+  return users.name === "Дохлый Пит";
+};
+
+const findPit = users.find(foundUser);
+
+console.log(findPit);
