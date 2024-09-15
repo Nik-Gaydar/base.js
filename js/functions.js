@@ -1,16 +1,14 @@
 // Работа с строками
 
 /**
- * @function capitalizeFirstLetter
+ * @function toCapitalize
  * @param {string} name
- * @returns {string} Строка с заглавной буквы
+ * @returns {string} 
  */
 
-const capitalizeFirstLetter = (name) => {
-  return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-};
+const toCapitalize = (name) => {name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()};
 
-console.log(capitalizeFirstLetter('nikitos'));
+console.log(toCapitalize('nikitos'));
 
 /**
  * @function checkEmptyString
@@ -19,11 +17,11 @@ console.log(capitalizeFirstLetter('nikitos'));
  */
 
 const checkEmptyString = (firstName) => {
-  if (typeof firstName !== "string") {
-    return "Ну кого ты пытаешься надуть?"
+  if (typeof firstName !== 'string') {
+    return 'Ну кого ты пытаешься надуть?'
   }
   if (firstName.trim() === "") {
-    return "Да натыкай ты уже какие нибудь буквы!"
+    return 'Да натыкай ты уже какие нибудь буквы!'
   }
 };
 
@@ -39,14 +37,10 @@ console.log(checkEmptyString('  '));
  */
 
 const isEqualNumber = function(num1, num2) {
-  if (num1 === num2) {
-    return true;
-  } else {
-    return false;
-  }
+  return ( num1 === num2 ? true : false )
 };
 
-console.log(isEqualNumber(2, 2));
+console.log(isEqualNumber(2, 3));
 
 /**
  * @function checkSumTen
@@ -56,11 +50,7 @@ console.log(isEqualNumber(2, 2));
  */
 
 const checkSumTen = (num1, num2) => {
-  if (num1 + num2 > 10) {
-    return true;
-  } else {
-    return false;
-  }
+  return ( num1 + num2 > 10 ? true : false )
 };
 
 console.log(checkSumTen(8, 4));
@@ -78,7 +68,7 @@ console.log(checkSumTen(8, 4));
 const generateObjectToString = function(user) {
   if (
     typeof user !== 'object' || user === null) {
-    throw new Error("Что то здесь не так..");
+    throw new Error('Что то здесь не так..');
   }
   return `Разыскивается: ${user.name}, Возраст: ${user.age}`;
 };
@@ -100,13 +90,13 @@ console.log(generateObjectToString(user));
  */
 
 const users = [
-  { name: "Дохлый Пит", age: 75 },
-  { name: "Мрачный Джон", age: 40 },
-  { name: "Весёлый Гарри", age: 30 },
+  { name: 'Дохлый Пит', age: 75 },
+  { name: 'Мрачный Джон', age: 40 },
+  { name: 'Весёлый Гарри', age: 30 },
 ];
 
 const foundUser = (users) => {
-  return users.name === "Дохлый Пит";
+  return users.name === 'Дохлый Пит';
 };
 
 const findPit = users.find(foundUser);
