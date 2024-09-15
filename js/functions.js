@@ -82,11 +82,21 @@ console.log(generateObjectToString(user));
 // Работа с массивом объектов
 
 /**
+ * @typedef {object} User
+ * @property {string} Name
+ * @property {number} Age
+ */
+
+/**
+ * @typedef {object} FoundUser
+ * @property {string} Name
+ * @property {number} Age
+ */
+
+/**
  * @function foundUser
- * @param {object} user
- * @param {string} user.name
- * @param {number} user.age
- * @returns {object} foundUser
+ * @param {User} user
+ * @returns {FoundUser} foundUser
  */
 
 const users = [
