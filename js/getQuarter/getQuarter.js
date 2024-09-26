@@ -17,5 +17,3 @@ export const getQuarter = (month) => {
     return -1;
   }
 };
-
-console.log(getQuarter(10));
